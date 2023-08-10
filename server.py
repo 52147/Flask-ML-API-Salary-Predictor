@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pickle
 from flask_cors import CORS
+import datetime
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -30,6 +32,27 @@ def get_status():
 def echo():
     data = request.get_json(force=True)
     return jsonify({"message": "Received the following data:", "data": data})
+
+@app.route('/model/metadata', methods=['GET'])
+def get_metadata():
+    # This is a mock data for now, you can modify this to return real metadata.
+    metadata = {
+        "model_name": "Salary Predictor",
+        "created_on": "2023-01-01",
+        "version": "1.0",
+        "description": "Predicts salary based on experience in years."
+    }
+    return jsonify(metadata)
+
+@app.route('/server/status', methods=['GET'])
+def server_status():
+    status = {
+        "server_time": str(datetime.datetime.now()),
+        "status": "Running",
+
+        "load": os.getloadavg()  # returns load average, works on UNIX systems
+    }
+    return jsonify(status)
 
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
