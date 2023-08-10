@@ -31,21 +31,21 @@ This API uses a pre-trained model to predict the salary based on a given experie
    ```
    
 2. **Set up a Virtual Environment** (Recommended):
-This keeps dependencies for this project separate from your global Python environment.
+   This keeps dependencies for this project separate from your global Python environment.
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 3. **Install Required Packages**:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 4. **Start the Server**:
-```bash
-python server.py
-```
-Once started, the API should be live at http://localhost:5001/.
+   ```bash
+   python server.py
+   ```
+   Once started, the API should be live at http://localhost:5001/.
 
 ## Endpoints
 1. Salary Prediction:
@@ -56,8 +56,7 @@ Once started, the API should be live at http://localhost:5001/.
 - ```
   {
     "exp": <experience_in_years_as_float>
-}
-
+   }
   ```
 - Returns: Predicted salary and a message.
 2. Health Check:
