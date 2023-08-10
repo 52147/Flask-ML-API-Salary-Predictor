@@ -48,22 +48,28 @@ This API uses a pre-trained model to predict the salary based on a given experie
    Once started, the API should be live at http://localhost:5001/.
 
 ## Endpoints
-1. Salary Prediction:
-
-- Endpoint: /api
-- Method: POST
-- Body:
-- ```
-  {
-    "exp": <experience_in_years_as_float>
-   }
-  ```
-- Returns: Predicted salary and a message.
-2. Health Check:
-
-- Endpoint: /test
-- Method: GET
-- Returns: A "Hello, World!" string to verify the server is running.
+1. **Salary Prediction**:
+   - **Endpoint**: /api
+   - **Method**: POST
+   - **Body**:
+   - ```
+     {
+       "exp": <experience_in_years_as_float>
+     }
+     ```
+   - Returns: Predicted salary and a message.
+2. **Health Check**:
+   - **Endpoint**: /test
+   - **Method**: GET
+   - **Returns**: A "Hello, World!" string to verify the server is running.
+3. **Model Metadata**:
+   - **Endpoint**: `/model/metadata`
+   - **Method**: `GET`
+   - **Returns**: Metadata about the model such as its name, creation date, version, and description.
+4. **Server Status**:
+   - **Endpoint**: `/server/status`
+   - **Method**: `GET`
+   - **Returns**: The current time on the server, its running status, and its load average (UNIX systems only).
 
 ## Testing
 For local testing, you can use curl:
