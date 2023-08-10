@@ -49,8 +49,8 @@ This API uses a pre-trained model to predict the salary based on a given experie
 
 ## Endpoints
 1. **Salary Prediction**:
-   - **Endpoint**: /api
-   - **Method**: POST
+   - **Endpoint**: `/api`
+   - **Method**: `POST`
    - **Body**:
    - ```
      {
@@ -59,8 +59,8 @@ This API uses a pre-trained model to predict the salary based on a given experie
      ```
    - Returns: Predicted salary and a message.
 2. **Health Check**:
-   - **Endpoint**: /test
-   - **Method**: GET
+   - **Endpoint**: `/test`
+   - **Method**: `GET`
    - **Returns**: A "Hello, World!" string to verify the server is running.
 3. **Model Metadata**:
    - **Endpoint**: `/model/metadata`
